@@ -10,7 +10,7 @@ function add(numbers) {
     .filter((x) => x <= 1000);
   console.log("data>>>", data);
   try {
-    negatives = data.filter((x) => parseInt(x) < 0);
+    let negatives = data.filter((x) => parseInt(x) < 0);
     if (negatives.length) {
       throw negatives + " - negative numbers not allowed";
     }
@@ -18,7 +18,7 @@ function add(numbers) {
     console.log(err);
     return err;
   }
-  positives = data.filter((x) => parseInt(x) >= 0);
+  let positives = data.filter((x) => parseInt(x) >= 0);
   const sum = data.reduce((a, b) => a * 1 + b * 1, 0);
   console.log("sum of the numbers is: " + sum);
   return sum;
